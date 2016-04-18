@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C4700FB9-4C34-4651-8044-0728067F8855}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{FEBAEC09-DE8F-4FBF-9223-FB06D48AE16B}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JustForFun.WunderCube</RootNamespace>
-    <AssemblyName>JustForFun.WunderCube</AssemblyName>
+    <RootNamespace>JustForFun.WunderCube.Core</RootNamespace>
+    <AssemblyName>JustForFun.WunderCube.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -35,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Text.RegularExpressions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,24 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Cube.cs" />
+    <Compile Include="CubeRepository.cs" />
+    <Compile Include="CubeSolver.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="Point.cs" />
+    <Compile Include="PointTraveller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WordFinder.cs" />
+    <Compile Include="WordRepository.cs" />
+    <Compile Include="WordTree.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\JustForFun.WunderCube.Core\JustForFun.WunderCube.Core.csproj">
-      <Project>{febaec09-de8f-4fbf-9223-fb06d48ae16b}</Project>
-      <Name>JustForFun.WunderCube.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Data\cube.txt" />
-    <Content Include="Data\words.txt" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

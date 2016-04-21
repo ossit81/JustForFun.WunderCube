@@ -17,7 +17,7 @@ namespace JustForFun.WunderCube.Core.Test
 
 
         [Fact]
-        public void Solve_CanFindTheWordFromFromManyPossibleBranches()
+        public void Solve_CanFindTheWordFromManyPossibleBranches()
         {
             var expectedWord = "TEST";
 

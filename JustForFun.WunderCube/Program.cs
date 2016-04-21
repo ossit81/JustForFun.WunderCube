@@ -11,18 +11,15 @@ namespace JustForFun.WunderCube
         private static string WordsFile = "words.txt";
 
         private static string ResultFile = "results.txt";
-
-        static readonly CubeRepository CubeRepository = new CubeRepository();
-        static readonly WordRepository WordRepository = new WordRepository();
-
+        
         static void Main(string[] args)
         {
             var startTime = DateTime.Now;
-            var cube = CubeRepository.GetCube(CubeFile);
+            var cube = new Cube(File.ReadAllText(CubeFile).ToLower());
             Console.Out.WriteLine("Cube creation time: " + (DateTime.Now - startTime));
             
             startTime = DateTime.Now;
-            var wordTree = WordRepository.GetWordTree(WordsFile);
+            var wordTree = new WordTree(File.ReadAllLines(WordsFile));
             Console.Out.WriteLine("WordTree creation time: " + (DateTime.Now - startTime));
 
             startTime = DateTime.Now;
@@ -32,13 +29,9 @@ namespace JustForFun.WunderCube
             Console.Out.WriteLine("Word count: " + words.Count());
             
             Console.Out.WriteLine("Writing words to output file '{0}'...", ResultFile);
-            if (File.Exists(ResultFile))
-            {
-                File.Delete(ResultFile);
-            }
-
-            File.WriteAllText(ResultFile, "Cube contains following words:");
-            File.WriteAllLines(ResultFile, words);
+            
+            File.WriteAllText(ResultFile, "Cube contains following words:" + Environment.NewLine);
+            File.AppendAllLines(ResultFile, words);
 
             Console.Out.WriteLine("Output file successfully created.");
             

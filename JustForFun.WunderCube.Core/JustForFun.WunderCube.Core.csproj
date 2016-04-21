@@ -42,14 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cube.cs" />
-    <Compile Include="CubeRepository.cs" />
     <Compile Include="CubeSolver.cs" />
-    <Compile Include="Node.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="PointTraveller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WordFinder.cs" />
-    <Compile Include="WordRepository.cs" />
     <Compile Include="WordTree.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -45,7 +45,7 @@ namespace JustForFun.WunderCube.Core
 
         private static Task<HashSet<string>> GetWordResultsAsync(WordFinder wordFinder)
         {
-            return Task.Run( () => { return wordFinder.Find(); } );
+            return Task.Run( () => wordFinder.Find() );
         }
 
     }

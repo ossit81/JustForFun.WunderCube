@@ -44,14 +44,11 @@ namespace JustForFun.WunderCube.Core
         private readonly Cube _cube;
 
 
-        public Point StartPoint
-        {
-            get { return _startPoint; }
-        }
+        public Point StartPoint => _startPoint;
 
         public Node CurrentNode { get; }
 
-        public PointTraveller Parent { get { return _parent; } }
+        public PointTraveller Parent => _parent;
 
         public PointTraveller(Cube cube, Point startPoint, Node currentNode) : this(null, cube, startPoint, currentNode)
         {
@@ -59,7 +56,6 @@ namespace JustForFun.WunderCube.Core
 
         protected PointTraveller(PointTraveller parent, Cube cube, Point startPoint, Node currentNode)
         {
-            this.CurrentNode = currentNode;
             this._parent = parent;
             this._cube = cube;
             this.CurrentNode = currentNode;

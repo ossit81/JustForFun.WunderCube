@@ -69,7 +69,6 @@
   <ItemGroup>
     <Compile Include="CubeSolverTest.cs" />
     <Compile Include="CubeTest.cs" />
-    <Compile Include="NodeTest.cs" />
     <Compile Include="PointTest.cs" />
     <Compile Include="PointTravellerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

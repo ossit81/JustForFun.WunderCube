@@ -10,7 +10,7 @@ namespace JustForFun.WunderCube.Core.Test
     public class WordFinderTest
     {
         [Fact]
-        public void Find_WillFindWordFromStartPoint()
+        public void Find_WillFindWordFromManyLayers()
         {
 
             var wordTree = new WordTree(new[] { "TEST" });
@@ -52,7 +52,7 @@ ___T
 T___
 _E__
 __S_
-____
+T___
 ");
 
             var target = new WordFinder(Point.Zero, cube, wordTree);
@@ -130,8 +130,5 @@ ____
             Assert.Contains("TIKKA", results);
 
         }
-
-
-
     }
 }

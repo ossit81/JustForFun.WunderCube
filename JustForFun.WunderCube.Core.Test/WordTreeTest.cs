@@ -26,14 +26,6 @@ namespace JustForFun.WunderCube.Core.Test
         }
 
         [Fact]
-        public void Node_ToString_MakeStringFromPreviousNodeCharacters()
-        {
-            var target = new WordTree(new[] { @"AA", "AAA", "ABC", "BAC" });
-
-            Assert.Equal("ABC", target['A']['B']['C'].ToString());
-        }
-
-        [Fact]
         public void WordTree_IsEndOfWordBoolean_HasSetForWordLastCharacterNode()
         {
             var target = new WordTree(new[] { @"AA", "AAA", "ABC", "BAC" });

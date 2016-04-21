@@ -10,7 +10,7 @@ namespace JustForFun.WunderCube.Core.Test
     public class PointTest
     {
         [Fact]
-        public void OperatorPlus_AddsPointComponentsTogether()
+        public void OperatorPlus_AddPointComponentsTogether()
         {
             var point1 = new Point() { X = 100, Y = 200, Z = 300 };
             var point2 = new Point() { X = 1, Y = 2, Z = 3 };
@@ -42,16 +42,16 @@ namespace JustForFun.WunderCube.Core.Test
         }
 
         [Fact]
-        public void OperatorNotEqual_Wtf()
+        public void OperatorNotEqual_PointEqualsNullShouldBeFalse()
         {
             var target = new Point() { X = 100, Y = 200, Z = 300 };
 
-            Assert.True(target != null);
+            Assert.False(target == null);
         }
 
 
         [Fact]
-        public void OperatorNotEqual_Wtf2()
+        public void OperatorEqual_NullPointEqualsNullShouldBeTrue()
         {
             Point target = null;
 
